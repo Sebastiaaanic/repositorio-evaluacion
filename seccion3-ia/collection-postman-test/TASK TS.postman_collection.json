@@ -1,0 +1,171 @@
+{
+  "info": {
+    "_postman_id": "b54dd28f-6a25-40ef-a4fb-4fee7db08bbd",
+    "name": "TASK TS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49536220",
+    "_collection_link": "https://go.postman.co/collection/49536220-b54dd28f-6a25-40ef-a4fb-4fee7db08bbd?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "TASK CREATE",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"typeOperation\": \"A\",\r\n  \"TaskCreate\": {\r\n    \"idTask\": \"0d57c76a67704aad90873a414290baa7\",\r\n    \"title\": \"LAVAR PLATOS\",\r\n    \"description\": \"LAVAR LOS PLATOS DE TODOS LOS EMPLEADOS\",\r\n    \"priority\": \"PENDIENTE\",\r\n    \"idResponsable\": \"cc135084c46f46db9442e7a82afa16ea\",\r\n    \"dateLimit\": \"2026-06-30\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/tasks/ManageTask",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "tasks",
+            "ManageTask"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "USER MANAGE",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"typeOperation\": \"A\",\r\n  \"name\":       \"JOSELIN JAMILETH\",\r\n  \"lastName\": \"ORON PIO\",\r\n  \"age\": 50,\r\n  \"status\": \"A\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/v1/users/ManageUser",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "ManageUser"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "CUSTOM FIND TASK",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/tasks/GetTasks?status=PENDIENTE&responsable=32f5cd8ecb5f4d15a6c0159314eacdd0&desde=2026-01-01&hasta=2026-06-30",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "tasks",
+            "GetTasks"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "PENDIENTE"
+            },
+            {
+              "key": "responsable",
+              "value": "32f5cd8ecb5f4d15a6c0159314eacdd0"
+            },
+            {
+              "key": "desde",
+              "value": "2026-01-01"
+            },
+            {
+              "key": "hasta",
+              "value": "2026-06-30"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PATCH TASK",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/tasks/PatchTasks/e1bab50109684a18b5f3693d414df7e7/PENDIENTE",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "tasks",
+            "PatchTasks",
+            "e1bab50109684a18b5f3693d414df7e7",
+            "PENDIENTE"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET TASK REPORT",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/v1/tasks/resumen?responsable=32f5cd8ecb5f4d15a6c0159314eacdd0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "v1",
+            "tasks",
+            "resumen"
+          ],
+          "query": [
+            {
+              "key": "responsable",
+              "value": "32f5cd8ecb5f4d15a6c0159314eacdd0"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
